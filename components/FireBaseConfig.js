@@ -1,3 +1,9 @@
+// ASSIGNMENT6
+// WEBSITE: https://a6-livid.vercel.app/
+// Name: Dai Dung Lam
+// Student ID: 137 632 196
+// Date: 12/09/2023
+// Section: NDD 
 import { initializeApp } from 'firebase/app';
 import { getDatabase, ref, push, onValue, remove, set, child, get} from 'firebase/database';
 
