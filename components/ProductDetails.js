@@ -25,15 +25,8 @@ export default function ProductExport() {
   const addToCart = (product) =>{
     const database = getDatabase(app);
     const cartRef = ref(database, 'product');
-
-    
-    const timestamp = new Date().getTime();
-
-    // Reference the child node with the timestamp as the key
-    const productRef = child(cartRef, timestamp.toString());
   
-    // Push the product data to the database
-    set(productRef, {
+    set(cartRef, {
       title: product.title,
       price: product.price,
       description: product.description,

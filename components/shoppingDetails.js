@@ -20,8 +20,6 @@ export default function ShoppingExport() {
     const database = getDatabase(app);
     const productsRef = ref(database, 'product'); 
 
-    
-    
     const unsubscribe = onValue(productsRef, (snapshot) => {
       const data = snapshot.val();
       if (data) {
