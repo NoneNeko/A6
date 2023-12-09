@@ -24,9 +24,11 @@ export default function ProductExport() {
 
   const addToCart = (product) =>{
     const database = getDatabase(app);
-    const cartRef = ref(database, 'product');
-  
-    set(cartRef, {
+    const cartRef = ref(database, 'product');  
+    const timestamp = new Date().getTime();
+
+   const productRef = child(cartRef, timestamp.toString());
+    set(productRef, {
       title: product.title,
       price: product.price,
       description: product.description,
